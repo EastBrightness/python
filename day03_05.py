@@ -34,19 +34,19 @@ print('\n o의 총 개수는', count)
 
 # 문제 2 : 1~12월 출력하되, 입력받은 월은 skip
 com = int(input('입력할 달(1~12월) >> '))
-for i in range(13):
+for i in range(1, 13):
     if(i == com):
         continue
     print(i, "월")
 
 # 문제 3 : 1월~ 12월을 출력하되, 입력받은 월로부터는 출력안함
-com = int(input('입력할 달(1~12월) >> '))
-for i in range(13):
+com = int(input('몇 월까지만 출력할까요? >> '))
+for i in range(1, 13):
     if(i == com):
         break
     print(i, "월")
 
 # 문제 4 : 구구단을 만들어주세요.
 for i in range(1, 10):
-    for j in range(1, 10):
-        print(i, '*', j, '=', i*j)
+    for j in range(2, 10):
+        print(j, '*', i, '=', i*j, end='\t') # 탭 키 누르기.
